@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>TrabalhoPrático 03</title>
+
+  </head>
+  <body>
+    <!--Receita de Vaca Atolada-->
+
+    <!--Cabeçalho-->
+
+    <div id="DivHeader" class="header">
+        <h1 id="titulo" class = "center corb borda cantos"> Receita para uma Deliciosa Vaca Atolada</h1>
+        <hr />
+        <a href="https://www.tudogostoso.com.br/receita/7872-vaca-atolada.html">
+            <img width="650" id="Vaca" class="Imagem"
+            src="https://pubimg.band.uol.com.br/files/51f45b1d71c2d32e457e.png"
+            alt="Imagem do prato">
+        </a>
+        <button id="button1">Mais Imagens</button>
+        <button id="boto">Minizimar Imagem</button>
+        <button id="bato">Change</button>
+        <script>
+          const imagem = document.getElementById('Vaca');
+          const button = document.getElementById('button1');
+          const div =document.getElementById('DivHeader');
+          const titulo = document.getElementById('titulo');
+          let original = true;
+          let original2 = true;
+          button.addEventListener('click',()=>{
+            if(original){
+                imagem.setAttribute('src', 'imagen2.jpg')
+                imagem.setAttribute('alt','Imagem Alternativa do Prato')
+                imagem.setAttribute('width', '650')
+            }
+            else{
+                imagem.setAttribute('src', 'https://pubimg.band.uol.com.br/files/51f45b1d71c2d32e457e.png');
+                imagem.setAttribute('alt','Imagem do prato')
+                imagem.setAttribute('width', '650')
+            }
+            original = !original;
+          });
+          boto.addEventListener('click',()=>{
+            if(original){
+                imagem.setAttribute('src', 'https://pubimg.band.uol.com.br/files/51f45b1d71c2d32e457e.png');
+                imagem.setAttribute('alt','Imagem do prato')
+                imagem.setAttribute('widht', '650')
+            }
+            else if(original){
+              imagem.setAttribute('src', 'imagen2.jpg')
+              imagem.setAttribute('alt','Imagem Alternativa do Prato')
+              imagem.setAttribute('width', '650')
+            }
+            else{
+                imagem.setAttribute('src', '')
+                imagem.setAttribute('alt','')
+                imagem.setAttribute('width', '')
+            }
+            original = !original;
+            original2 = !original2;
+          });
+          bato.addEventListener('click',()=>{
+            if(original){
+                div.classList.toggle('headerNovo')
+                titulo.classList.toggle('TituloNovo')
+                titulo.textContent = 'Uma Receita Para Os Paladares Mais Refinados!!'
+            }
+            else{
+              
+                div.classList.remove('headerNovo')
+                titulo.classList.remove('TituloNovo')
+                titulo.textContent = 'Receita para uma Deliciosa Vaca Atolada'
+            }
+            original = !original;
+          });  
+        </script>
+    </div>
+
+    <!--Linha-->
+
+    <hr />
+
+    <h2 id="titulobd" class="col-4">1º Passo: Organize os Ingredientes sobre a mesa para facilitar o preparo.</h2>
+
+    <!--Ingredientes-->
+    <div class="row">
+      <div class= "col-4"> 
+      <h2 class="center corb borda cantos" id="h2-2">
+        INGREDIENTES:
+      </h2>
+    <ul id="Receita1" class="row" type="i">
+      <li>2 Colheres (sopa) de óleo</li>
+      <li>1 Colheres (chá) de vinagre</li>
+      <li>1,5 kg de costela bovina cortada em pedaços</li>
+      <li>1 Cebola picada</li>
+      <li>2 Tomates descascados e sem sementes, picados</li>
+      <li>3 Dentes de alho picados</li>
+      <li>1 Litro de água</li>
+      <li>2 Sachês de Caldo SAZÓN® Costela</li>
+      <li>1 kg de mandioca, em cubos grandes</li>
+      <li>1 Pitada de pimenta-do-reino</li>
+      <li>3 Colheres (sopa) de salsa/coentro picada</li>
+    </ul>
+    </div>
+    </div>
+
+    <h2 id="titulobd2" class="col-4">2º Passo: Preparação</h2>
+
+    <div class="row">
+      <div class= "col-4"> 
+      <h2 class="center corb borda cantos" id="h2-2">
+        MODO DE PREPARO:
+      </h2>
+      <ol id="Receita2">
+        <li>Numa tigela, tempere as costelas com sal e pimenta-do-reino e um sachê de sazón.</li>
+        <P>
+        <li>Leve uma panela de pressão com o óleo ao ao fogo médio. Quando aquecer, frite as costelas, 
+        <br>em etapas, até dourarem por todos os lados. Retire da panela e transfira para um prato.</li>
+        <P>
+        <li>Refogue a cebola na mesma panela. Regue com ¼ de xícara (chá) de água e 
+          <br>raspe bem o fundo da panela (esse fundinho é que dá o sabor à receita). 
+          <br>Junte os tomates, os dentes de alho, o vinagre e cozinhe por 5 minutos. 
+          <br>Retorne as costelas à panela e regue com o litro de água. 
+          <br>Tampe a panela, e após começar a apitar, conte 35 minutos.</li>
+        <p>
+          <li>Desligue o fogo e, quando toda a pressão sair, abra a panela.
+          <br>Adicione a mandioca e complete com 1 xícara (chá) de água. 
+          <br>Deixe cozinhar por 20 minutos, mexendo de vez em quando para o fundo não queimar. 
+          <br>Na hora de servir, salpique folhas de salsinha fresca.</li>
+      </ol>
+
+    </div>
+    </div>
+    <button id="buta">Change</button>
+    <script>
+      const div2 = document.getElementById('Receita1');
+      const div3 = document.getElementById('Receita2');
+      const butao = document.getElementById('buta');
+      const titulobaixo = document.getElementById('titulobd');
+      const titulobaixo2 = document.getElementById('titulobd2');
+      let origin =true;
+      butao.addEventListener('click',()=>{
+        if(origin){
+          div2.classList.toggle('receitanova')
+          titulobaixo.classList.toggle('TituloNovo')
+          div3.classList.toggle('receitanova')
+          titulobaixo2.classList.toggle('TituloNovo')
+        }
+        else{
+          div2.classList.remove('receitanova')
+          titulobaixo.classList.remove('TituloNovo')
+          div3.classList.remove('receitanova')
+          titulobaixo2.classList.remove('TituloNovo')
+        }
+        origin = !origin;
+      });
+  
+      </script>
+      <hr>
+      <a href="https://panelinha.com.br/receita/vaca-atolada</h5>">Site da receita</a>
+      <hr> 
+      <a href="https://www.tudogostoso.com.br/receita/7872-vaca-atolada.html</h5>">Site da receita</a>
+      <hr>
+      <a href="https://www.saboresajinomoto.com.br/receita/vaca-atolada-2</h5>">Site da receita</a>
+
+      
+
+  </body>
+</html>
